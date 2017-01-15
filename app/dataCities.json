@@ -1,0 +1,44 @@
+[
+  {
+    "city": "Manchester",
+    "country": "UK",
+    "attractions": [
+      "football",
+      "bars"
+    ]
+  },
+  {
+    "city": "Liverpool",
+    "country": "UK",
+    "attractions": [
+      "football",
+      "bars",
+      "music"
+    ]
+  },
+  {
+    "city": "York",
+    "country": "UK",
+    "attractions": [
+      "city walls",
+      "cathedral"
+    ]
+  },
+  {
+    "city": "Las Vegas",
+    "country": "USA",
+    "attractions": [
+      "casinos",
+      "Grand Canyon",
+      "shows"
+    ]
+  },
+  {
+    "city": "Beijing",
+    "country": "China",
+    "attractions": [
+      "Great Wall of China",
+      "Forbidden City"
+    ]
+  }
+]

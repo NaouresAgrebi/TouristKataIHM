@@ -1,0 +1,105 @@
+[
+  {
+    "attractions": [
+      {
+        "attractionId": 1,
+        "attractionName": "football"
+      },
+      {
+        "attractionId": 2,
+        "attractionName": "bars"
+      }
+    ],
+    "cityId": 1,
+    "cityName": "Manchester",
+    "country": {
+      "countryId": 1,
+      "countryName": "UK"
+    },
+    "visited": false
+  },
+  {
+    "attractions": [
+      {
+        "attractionId": 1,
+        "attractionName": "football"
+      },
+      {
+        "attractionId": 2,
+        "attractionName": "bars"
+      },
+      {
+        "attractionId": 3,
+        "attractionName": "music"
+      }
+    ],
+    "cityId": 2,
+    "cityName": "Liverpool",
+    "country": {
+      "countryId": 1,
+      "countryName": "UK"
+    },
+    "visited": false
+  },
+  {
+    "attractions": [
+      {
+        "attractionId": 4,
+        "attractionName": "city walls"
+      },
+      {
+        "attractionId": 5,
+        "attractionName": "cathedral"
+      }
+    ],
+    "cityId": 3,
+    "cityName": "York",
+    "country": {
+      "countryId": 1,
+      "countryName": "UK"
+    },
+    "visited": false
+  },
+  {
+    "attractions": [
+      {
+        "attractionId": 6,
+        "attractionName": "casinos"
+      },
+      {
+        "attractionId": 7,
+        "attractionName": "Grand Canyon"
+      },
+      {
+        "attractionId": 8,
+        "attractionName": "shows"
+      }
+    ],
+    "cityId": 4,
+    "cityName": "Las Vegas",
+    "country": {
+      "countryId": 2,
+      "countryName": "USA"
+    },
+    "visited": false
+  },
+  {
+    "attractions": [
+      {
+        "attractionId": 9,
+        "attractionName": "Great Wall of China"
+      },
+      {
+        "attractionId": 10,
+        "attractionName": "Forbidden City"
+      }
+    ],
+    "cityId": 5,
+    "cityName": "Beijing",
+    "country": {
+      "countryId": 3,
+      "countryName": "China"
+    },
+    "visited": false
+  }
+]

@@ -1,0 +1,75 @@
+<div ng-controller="addCityCtrl as showCase" ng-init="load()">
+	 <form name="myForm">
+             <div ng-if="showAlertCreated" >
+                      <div class="alert alert-success fade in">
+                         <a href="#" class="close" data-dismiss="alert">&times;</a>
+                         <strong>Success!</strong> Your city has been created .
+                      </div>
+              </div>
+       
+
+ 		<div class="row">
+            <div class="col-md-5">
+                <label for="inputName" class="col-md-5 control-label">Name <span style="color:red "> * </span>
+                </label>
+                <div class="col-md-7">
+                    <input name="inputName" style="width:90%;height:35px" id="inputName" class="form-control" 
+                           type="text" required="required" ng-model="city.cityName">
+                            <div  style="color:red "  ng-show="myForm.$dirty && showMsgError">
+                                <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
+                                <span class="sr-only" >Error:</span>This name exist in dataBase .
+                            </div>
+                           
+                </div>
+            </div>
+        </div>
+        <br />
+        <div class="row">
+                <div class="col-md-5">
+                    <label for="inputCountry" class="col-md-5 control-label">Country Name </label>
+                        <div class="col-md-7">
+                            <select ui-select2 ng-model="city.country.countryId"  style="width:90%">
+                                <option ng-repeat="item in countries" value="{{item.countryId}}">{{item.countryName}}</option>
+                            </select>
+                        </div>
+                </div>
+        </div>
+        <br/>
+         <div class="row">
+                <div class="col-md-5">
+                    <label for="inputAttraction" class="col-md-5 control-label">Attraction Name 
+                        <span style="color:red "> * </span>
+                    </label>
+                        <div class="col-md-7">
+                           
+                             <div style="width:100%;height:35px"  data-ng-dropdown-multiselect="" data-options="attractionsInit"
+                                 data-selected-model="attractionModel"
+                                data-extra-settings="datasettings"  data-translation-texts="customTexts">
+                            </div>
+                        </div>
+                </div>
+        </div>
+        <br/>
+        <div class="row">
+             <div class="col-md-5">
+        	    <label for="inputVisited" class="col-lg-2 control-label">Visited</label>
+                 <div class="col-md-7">
+                    <input name="visited" id="visited" value="true" type="checkbox" ng-model="city.visited">
+                 </div>  
+            </div>                         
+       	</div>
+        <br>
+        <br>
+        <div class="row">
+            <div class="col-md-5">
+                 <button type="submit" ng-click="addCity()" class="btn btn-primary" data-toggle="tooltip" 
+                            ng-disabled="!city.cityName || attractionModel.length == 0"
+                            data-placement="left" title="Add City" > Add City                
+                </button>
+            </div>
+        </div>
+
+	 </from>
+
+
+</div>

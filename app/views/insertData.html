@@ -1,0 +1,38 @@
+<div ng-controller="insertDataCitiesCtrl as showCase" ng-init="load()">
+
+	<h4> Tourist Kata IHM :) </h4>
+
+	<br />
+	<ul class="nav nav-pills">
+ 		 <li role="presentation" ><a ng-click="insertData()">Insert Json File</a></li>
+ 		 <li role="presentation" ><a ng-click="consultCities()"> Consult Cities</a></li>
+ 		 <li role="presentation" ><a ng-click="addCity()"> Add City</a></li>
+  
+	</ul>
+
+    <br>   
+    <div ng-if="showAlert" >
+        <div class="alert alert-success fade in">
+          <a href="#" class="close" data-dismiss="alert">&times;</a>
+           <strong>Success!</strong> Your JsonFile has been insert successfully.
+         </div>
+    </div>
+
+
+    <br>
+    <div ng-if="showDataTable">
+      <br>
+     
+
+			<div data-ng-include src="'views/consultCities.html'">
+			</div>
+    		
+  	 </div>
+  	 <br>
+     <div ng-if="toAdd">
+			<div data-ng-include src="'views/addCity.html'"></div>
+    		
+  	 </div>
+
+
+</div>

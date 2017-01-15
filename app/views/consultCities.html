@@ -1,0 +1,56 @@
+<div ng-controller="consultCitiesCtrl as showCase" ng-init="load()">
+
+	 <form>
+	    <div class="form-group">
+		 	<div class="input-group">
+	  		 isVisited :  <span class="badge">{{ counters.visitedCounter }}</span>
+	  		</div>
+	  		<br>
+	  		<div class="input-group">
+	  		 notVisited :  <span class="badge">{{ counters.unVisitedCounter }}</span>
+	  		</div>
+	  		<br>
+			<div class="input-group">
+	    	    <div class="input-group-addon"><i class="glyphicon glyphicon-search"></i></div>
+	      		<input type="text" class="form-control" placeholder="Search City" ng-model="searchCity">
+	     	 </div>      
+	    </div>
+	  </form>
+  	<br />
+	  <table class="table table-bordered table-striped">
+	    <thead>
+	      <tr>
+	        <td>
+	          <a ng-click="sortType = 'cityName'; sortReverse = !sortReverse">
+	            City Name 
+	            <span ng-show="sortType == 'cityName' && !sortReverse" class="glyphicon glyphicon-chevron-down"> </span>
+	            <span ng-show="sortType == 'cityName' && sortReverse" class="glyphicon glyphicon-chevron-up">  </span>
+	          </a>
+	        </td>
+	        <td>Country Name</td>
+	        <td>Attractions</td>
+	        <td>Visited</td>
+	       
+	      </tr>
+	    </thead>
+	    
+	    <tbody>
+	      <tr ng-repeat="city in cities | orderBy:sortType:sortReverse | filter:searchCity">
+	        <td>{{ city.cityName }}</td>
+	        <td>{{ city.country.countryName }}</td>
+	        <td>
+	        	<div ng-repeat="attraction in city.attractions">
+	 				 {{attraction.attractionName}} 
+				</div>
+	        </td>
+	        <td>{{ city.visited }}</td>
+	      </tr>
+	    </tbody>
+	    
+	  </table>
+	  
+
+
+
+
+</div>
